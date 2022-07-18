@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <button 
-        style={{backgroundColor: buttonColor}} 
+        style={{backgroundColor: disabled ? 'gray' : buttonColor}} 
         onClick={() => setButtonColor(newButtonColor)}
         disabled={disabled}
       >
